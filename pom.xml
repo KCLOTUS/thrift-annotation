@@ -6,15 +6,11 @@
 
     <groupId>cn.naturemix</groupId>
     <artifactId>thrift-annotation</artifactId>
-    <version>1.0.1</version>
+    <version>1.0.0</version>
 
     <properties>
         <swift.version>0.13.0</swift.version>
         <thrift.version>0.9.3</thrift.version>
-        <dep.airlift.version>0.119</dep.airlift.version>
-        <dep.antlr.version>3.5.2</dep.antlr.version>
-        <dep.maven-api.version>3.2.5</dep.maven-api.version>
-        <dep.fb.nifty.version>0.23.0</dep.fb.nifty.version>
     </properties>
 
     <dependencies>

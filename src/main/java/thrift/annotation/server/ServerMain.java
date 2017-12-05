@@ -13,13 +13,14 @@ import java.util.concurrent.Executors;
 
 public class ServerMain {
     public static void main(String [] args) throws Exception{
+
         ThriftServiceProcessor processor = new ThriftServiceProcessor(
                 new ThriftCodecManager(),
                 new ArrayList<ThriftEventHandler>(),
                 new HelloServiceImpl()
         );
-        ExecutorService executorService = new Executors.newFixedThreadPool(1);
-        ThriftServerDef serverDef = new ThriftServerDef.newBuilder()
+        ExecutorService executorService = Executors.newFixedThreadPool(1);
+        ThriftServerDef serverDef = ThriftServerDef.newBuilder()
                 .listen(8899)
                 .withProcessor(processor)
                 .using(executorService)

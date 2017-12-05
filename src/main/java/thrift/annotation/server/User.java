@@ -3,8 +3,16 @@ package thrift.annotation.server;
 import com.facebook.swift.codec.ThriftField;
 import com.facebook.swift.codec.ThriftStruct;
 
+/**
+ * @author flytoyou
+ * @version 1.0.0
+ *
+ * 通过注解标注User.java 完成数据结构定义，其中@ThriftStruct标注在类上，
+ * @ThriftStruct标注对象对应Thrift IDL中的struct类型 @ThriftField用来标注属性，对应
+ * Thrift IDL中的属性定义
+ */
 @ThriftStruct
-public class User {
+public final class User {
     private String name;
 
     private String email;
